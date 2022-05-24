@@ -1,15 +1,3 @@
--- --------------------------------------------------------------------------- -
---                                                                             -
---                                                      :::      ::::::::      -
---   components.lua                                   :+:      :+:    :+:      -
---                                                  +:+ +:+         +:+        -
---   By: bella marvin@42.fr                       +#+  +:+       +#+           -
---                                              +#+#+#+#+#+   +#+              -
---   Created: 2021/12/13 00:01:31 by bella           #+#    #+#                -
---   Updated: 2021/12/13 00:01:31 by bella          ###   ########.fr          -
---                                                                             -
--- --------------------------------------------------------------------------- -
-
 local M = {}
 local util      = require("ft_header.util")
 local config    = require("ft_header.config")
@@ -49,6 +37,9 @@ end
 
 function M.ft_update(ops, login)
     local line = util.getline(9)
+    if line == nil then
+      return
+    end
     local index = string.find(line, "Updated")
     if index ~= config.margin + 1
         then
