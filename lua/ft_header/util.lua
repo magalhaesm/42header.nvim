@@ -12,11 +12,10 @@ end
 
 function M.get_user()
     return {
-        name = os.getenv("USER") or "marvin",
-        mail = os.getenv("USER_MAIL") or "<marvin@42.fr>"
+        name = os.getenv("USER42") or "marvin",
+        mail = os.getenv("MAIL42") or "<marvin@42.fr>"
     }
 end
-
 
 function M.makeline(ops, width, is_fill)
     local res   = ops.start
